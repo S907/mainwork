@@ -1,0 +1,75 @@
+<style>
+    .in-left input[type="text"],
+    .in-right textarea {
+        color: #000000 !important
+    }
+</style>
+<%- include("partial/header.ejs") %>
+    <%- include("partial/header-top.ejs") %>
+
+
+        <div class="banner-body cntct">
+            <div class="container">
+                <!-- contact -->
+                <div class="contact">
+                    <div class="contact-left">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3653.8340282232607!2d86.97919581498006!3d23.681892684623158!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f71ed4b8d77adf%3A0x59a4f122eec56950!2sNuruddin%20Road%2C%20Pathak%20Bari%2C%20Asansol%2C%20West%20Bengal!5e0!3m2!1sen!2sin!4v1642994449929!5m2!1sen!2sin"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                    <div class="contact-right">
+                        <p class="phn">+91 9002754063</p>
+                        <p class="phn-bottom">13, Nuruddin
+                            <span>Road, Bye Lane, 713301</span></p>
+                        <p class="lom">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia non cupiditate sequi saepe modi pariatur. Ex, laborum! Velit laboriosam nemo iste quaerat assumenda. Ut animi aliquid molestiae est accusantium quod.</p>
+                    </div>
+                    <div class="clearfix"> </div>
+                    <div class="contact-left1">
+                        <h3>Contact Us With <span>Any Queston</span></h3>
+                        
+                            <div class="">
+                                
+                            </div>
+                            
+                                <div class="in-left">
+                                    <form action="/send-mail" method="post">
+                                        <input type="text" name="name" placeholder="Your Name:" required>
+                                        <input type="text" name="contact" placeholder="Phone Number:" required>
+                                        <input type="text" name="email" placeholder="E-mail:" required>
+
+                                </div>
+                                <div class="in-right">
+
+                                    <textarea placeholder="Message:" name="message"></textarea>
+                                    <input type="submit" value="Submit">
+                                    </form>
+                                </div>
+                                <div class="clearfix"> </div>
+                    </div>
+                    <div class="contact-right1">
+                        <h3>Find Us On <span>Social Websites</span></h3>
+
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere veniam minus, quasi tempore velit culpa eaque tempora dolorum iusto sint nesciunt necessitatibus tenetur fuga, nobis consequatur animi nam, voluptates in.</p>
+                        <ul>
+                            <li>
+                                <a href="#" class="g1"> </a>
+                            </li>
+                            <li>
+                                <a href="#" class="p1"> </a>
+                            </li>
+                            <li>
+                                <a href="#" class="facebook1"> </a>
+                            </li>
+                            <li>
+                                <a href="#" class="twitter1"> </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+                <!-- //contact -->
+            </div>
+        </div>
+
+
+
+        <%- include("partial/footer.ejs") %>

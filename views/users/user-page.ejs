@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/user-page.css">
+    
+    <title><%-title%></title>
+</head>
+<body>
+    
+    <div class="container">
+    
+        <nav class="navbar">
+            <ul class="nav-links-left">
+                <li><a href="#">
+                    Product
+                    <i class="fas fa-chevron-down"></i>
+                </a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Use Cases
+                    <i class="fas fa-chevron-down"></i>
+                </a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
+            <ul class="nav-links-right">
+                
+                <a href="/users/user-register">Register</a>
+                <a href="/users/user-login">Login</a>
+            </ul>
+        </nav>
+    
+        <nav class="navbar-bottom">
+            <ul class="nav-left">
+                <li><a href="#">Project</a></li>
+                <li><a href="#">Remote</a></li>
+                <li><a href="#">Teamwork</a></li>
+                <li><a href="#">Productivity</a></li>
+                <li><a href="#">Marketing</a></li>
+            </ul>
+            <ul class="nav-right">
+                <li><a href="#">
+                    <i class="fas fa-search"></i>
+                </a></li>
+            </ul>
+        </nav>
+    
+        <main>
+            <h1 class="main-title">Productivity</h1>
+            <div class="main-content">
+                <div class="main-content-left">
+                    <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1140&q=80" alt="">
+                    <h2>Little things do make a difference</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum doloribus architecto magnam odit soluta velit voluptas impedit dolore explicabo minima animi, eius dolores saepe cupiditate?</p>
+                    <div>
+                        <img src="https://randomuser.me/api/portraits/med/women/29.jpg" alt="">
+                        <p>Kathryn Shelton</p>
+                    </div>
+                </div>
+                <div class="main-content-right">
+                    <h3>Recent articles</h3>
+                    <div class="article">
+                        <div class="article-left">
+                            <img src="https://images.unsplash.com/photo-1597898022816-7f98ba6bc686?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="">
+                        </div>
+                        <div class="article-right">
+                            <h2>Success Steps For Your Business</h2>
+                            <div>
+                                <img src="https://randomuser.me/api/portraits/med/men/14.jpg" alt="">
+                                <p>Connor Parsons</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="article">
+                        <div class="article-left">
+                            <img src="https://images.unsplash.com/photo-1568232033336-8bbd9ff19a9a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=564&q=80" alt="">
+                        </div>
+                        <div class="article-right">
+                            <h2>Common Symbols and Their Meanings</h2>
+                            <div>
+                                <img src="https://randomuser.me/api/portraits/med/women/14.jpg" alt="">
+                                <p>Susie Russell</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="article">
+                        <div class="article-left">
+                            <img src="https://images.unsplash.com/photo-1572015322728-37317e7b6f40?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=542&q=80" alt="">
+                        </div>
+                        <div class="article-right">
+                            <h2>The Strength Of Your Belief</h2>
+                            <div>
+                                <img src="https://randomuser.me/api/portraits/med/men/24.jpg" alt="">
+                                <p>Jonathan Yates</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    
+    
+    </div>
+
+    <script>
+        /* The design was taken from https://www.uidesigndaily.com/posts/sketch-articles-page-article-blog-post-cards-day-1122 */
+
+            const tl = gsap.timeline({ defaults: { ease: "power2.out", duration: 0.4 } })
+
+            tl.from(".navbar", { y: -20, opacity: 0 })
+            tl.from(".navbar-bottom", { y: -20, opacity: 0 })
+            tl.from(".main-title", { y: -20, opacity: 0 })
+            tl.from(".main-content-left", { y: -20, opacity: 0 })
+            tl.from(".main-content-right", { y: -20, opacity: 0 })
+    </script>
+    
+</body>
+</html>

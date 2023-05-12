@@ -1,0 +1,48 @@
+<style>
+    tr>th {
+        text-align: center;
+    }
+</style>
+<%- include("partial/header.ejs") %>
+    <%- include("partial/header-top.ejs") %>
+        <div class="about">
+            <div class="about-text">
+                <h3>My Posts</h3>
+            </div>
+            <div class="about-info">
+                <h3>Manage Posts</h3>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col">Date</th>
+                            <th scope="col">Post Title</th>
+                            <th scope="col">Post Subtitle</th>
+                            <th scope="col">Post Body</th>
+                            <th scope="col" colspan="2">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                            <tr>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                  
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td><a href="updatepost/" class="btn btn-success">Update</a></td>
+                                <td><a href="deletepost/" class="btn btn-danger">Delete</a></td>
+
+                            </tr>
+                           
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <%- include("partial/footer.ejs") %>

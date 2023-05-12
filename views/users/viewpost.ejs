@@ -1,0 +1,77 @@
+<%- include("partial/header.ejs") %>
+    <%- include("partial/header-top.ejs") %>
+        <%- include("partial/banner.ejs") %>
+            <!-- single -->
+            <div class="single-page-artical">
+                <div class="artical-content">
+                    <h3>
+                        
+                        <%= displayData[0].postList.title %> (
+                            <%= displayData[0].postList.subTitle %> )
+
+                    </h3>
+                    <img class="img-responsive" src="/uploads/<%= displayData[0].postList.image %>" alt=" " />
+                    <p>
+                        <%= displayData[0].postList.postText %>
+                    </p>
+                </div>
+                <div class="artical-links">
+                    <ul>
+                        <li><small> </small><span><%= displayData[0].postList.createdAt.toDateString() %></span></li>
+                        <li><a href=""><small class="admin"> </small><span><%= displayData[0].postList.userList.firstName + " " +  displayData[0].postList.userList.lastName%></span></a></li>
+
+                        <li><a href="/"><small class="posts"> </small><span>View posts</span></a></li>
+                        <li><a href=""><small class="no"> </small><span>Category - <%- displayData[0].postList.categoryList.categoryName %></span></a></li>
+                        <li><a href="#"><span></span></a></li>
+                    </ul>
+                </div>
+
+                
+                <% if(displayData.length > 0) { %>
+                    <div class="comment-grid-top">
+                        <h3>Comments</h3>
+                        <% displayData.map((comment)=> {%>
+                            <div class="comments-top-top">
+                                <div class="top-comment-left">
+                                    <a href="#"><img class="img-responsive" src="/images/co.png" alt=""></a>
+                                </div>
+                                <div class="top-comment-right">
+                                    <ul>
+                                        <li><span class="left-at"><a href="#"><%=comment.name %></a></span></li> 
+                                        <li><span class="right-at"><%= comment.createdAt.toDateString()%></span></li>
+                                    </ul>
+                                    <p>
+                                        <%=comment.comment %>
+                                    </p>
+                                </div>
+                                <div class="clearfix"> </div>
+                            </div>
+                            <%})%>
+                    </div>
+                    <% } %>
+               
+
+
+
+
+                        <div class="artical-commentbox">
+                            <h3>Leave a comment</h3>
+                            
+                                <div class="">
+                                    
+                                </div>
+                        
+                                    <div class="table-form">
+                                        <form action="/comment" method="post">
+                                            <input type="hidden" name="post" value="<%=displayData[0]._id %>">
+                                            <input type="hidden" name="slug" value="<%=displayData[0].postList.slug %> ">
+                                            <input type="text" class="textbox" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}" name="name">
+                                            <input type="text" class="textbox" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" name="email">
+                                            <textarea value="Comment:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Comment';}" name="comment">Comment</textarea>
+                                            <input type="submit" value="Send">
+                                        </form>
+                                    </div>
+                        </div>
+            </div>
+            <!-- single -->
+            <%- include("partial/footer.ejs") %>

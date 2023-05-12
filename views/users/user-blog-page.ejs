@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/user-page.css">
+
+    <title>
+        <%-title%>
+    </title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <nav class="navbar blogpage">
+            <ul class="nav-links-left">
+                <li><a href="#">
+                    Name: <%= user.email%>
+                    <i class="fas fa-chevron-down"></i>
+                </a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#">
+                    <i class="fas fa-chevron-down"></i>
+                </a></li>
+                <li><a href="#"></a></li>
+            </ul>
+            
+            <ul class="nav-links-right">
+
+                <a href="/users/logout">Logout</a>
+                <a href="/users/user-blog-table">View Table</a>
+                
+            </ul>
+        </nav>
+
+        <!-- <nav class="navbar-bottom">
+            <ul class="nav-left">
+                <li><a href="#">Project</a></li>
+                <li><a href="#">Remote</a></li>
+                <li><a href="#">Teamwork</a></li>
+                <li><a href="#">Productivity</a></li>
+                <li><a href="#">Marketing</a></li>
+            </ul>
+            <ul class="nav-right">
+                <li><a href="#">
+                        <i class="fas fa-search"></i>
+                    </a></li>
+            </ul>
+        </nav> -->
+
+        <main>
+
+            
+           
+
+                <div class="new_main_blog">
+                    <legend>
+                        <h2>Blog Submisson Page</h2>
+                    </legend>
+                    <form action="/users/post-blog-form" method="post" enctype="multipart/form-data">
+                        
+                        <label for="Title">Title</label>
+                        <input type="text" name="title" id="">
+                        <label for="Sub-Title">Sub-Title</label>
+                        <input type="text" name="subTitle" id="">
+                        <label for="Category"  style="margin:5px;">Blog-Category</label>
+                        <select name="category" id=""  style="margin:10px;">
+                            <% categoryData.map((data)=>{%>
+        
+                                <option value="<%= data._id%>"><%= data.categoryName%></option>
+                            <% }) %>
+                        </select>
+                        <label for="Image">Image</label>
+                        <input type="file" name="image" id="image">
+                        <label for="Story">Story</label>
+                        <textarea name="postText" id="" cols="35" rows="10"></textarea>
+                        
+                        
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+        
+
+
+    </div>
+
+    <script>
+        /* The design was taken from https://www.uidesigndaily.com/posts/sketch-articles-page-article-blog-post-cards-day-1122 */
+
+        const tl = gsap.timeline({ defaults: { ease: "power2.out", duration: 0.4 } })
+
+        tl.from(".navbar", { y: -20, opacity: 0 })
+        tl.from(".navbar-bottom", { y: -20, opacity: 0 })
+        tl.from(".main-title", { y: -20, opacity: 0 })
+        tl.from(".main-content-left", { y: -20, opacity: 0 })
+        tl.from(".main-content-right", { y: -20, opacity: 0 })
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<div class="header-bottom">
+    <div class="header-bottom-top">
+        <ul>
+            <li> 
+                <a href="#" class="g"> </a>
+            </li>
+            <li>
+                <a href="#" class="p"> </a>
+            </li>
+            <li>
+                <a href="#" class="facebook"> </a>
+            </li>
+            <li>
+                <a href="#" class="twitter"> </a>
+            </li> -->
+        </ul>
+    </div>
+    <div class="clearfix"> </div>
+    <!-- banner -->
+    <div class="banner">
+        Slider-starts-Here
+        <script src="/jstwo/responsiveslides.min.js"></script>
+        <script>
+            // You can also use "$(window).load(function() {"
+            $(function() {
+                // Slideshow 4
+                $("#slider3").responsiveSlides({
+                    auto: true,
+                    pager: false,
+                    nav: true,
+                    speed: 500,
+                    namespace: "callbacks",
+                    before: function() {
+                        $('.events').append("<li>before event fired.</li>");
+                    },
+                    after: function() {
+                        $('.events').append("<li>after event fired.</li>");
+                    }
+                });
+
+            });
+        </script>
+        <!--//End-slider-script -->
+        <div id="top" class="callbacks_container wow fadeInUp" data-wow-delay="0.5s">
+            <ul class="rslides" id="slider3">
+
+                
+              
+                        <li>
+                            <div class="banner-inf">
+                                <h3>
+                                    Banner Heading
+                                </h3>
+                                <p>
+                                    Banner Text
+                                </p>
+                            </div>
+                        </li>
+                  
+            </ul>
+        </div>
+    </div>
+    <!-- //banner -->

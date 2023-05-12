@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap");
+* {
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background: #D3D1E0;
+  padding: 3rem 1rem;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 2rem 0;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px #00000031;
+  transition: 0.4s ease all;
+}
+.container .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid silver;
+}
+.container .navbar .nav-links-left {
+  display: flex;
+}
+.container .navbar .nav-links-left li {
+  list-style-type: none;
+}
+.container .navbar .nav-links-left li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+  margin-right: 1.2rem;
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+}
+.container .navbar .nav-links-left li a i {
+  margin-left: 0.3rem;
+}
+.container .navbar .nav-links-right button {
+  border: none;
+  outline: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  margin-right: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.container .navbar .nav-links-right button:nth-of-type(1) {
+  background-color: transparent;
+  border: 0.1rem solid #777777;
+}
+.container .navbar .nav-links-right button:nth-of-type(2) {
+  background-color: #111;
+  color: #fff;
+}
+.container .navbar-bottom {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container .navbar-bottom .nav-left {
+  display: flex;
+}
+.container .navbar-bottom .nav-left li {
+  list-style-type: none;
+}
+.container .navbar-bottom .nav-left li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+  margin-right: 1.2rem;
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+}
+.container .navbar-bottom .nav-right li {
+  list-style-type: none;
+}
+.container .navbar-bottom .nav-right li a {
+  margin-right: 1.2rem;
+  color: #000;
+}
+.container main {
+  padding: 0 2.3rem;
+}
+.container main h1 {
+  font-size: 2.5rem;
+  margin-bottom: -0.4rem;
+}
+.container main .main-content {
+  display: flex;
+}
+.container main .main-content .main-content-left {
+  flex: 1;
+  margin-right: 3.5rem;
+  margin-top: 1.8rem;
+}
+.container main .main-content .main-content-left img {
+  width: 100%;
+  height: 15rem;
+}
+.container main .main-content .main-content-left h2 {
+  font-size: 1.8rem;
+  text-transform: capitalize;
+}
+.container main .main-content .main-content-left p {
+  margin-top: -0.5rem;
+  font-weight: 500;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin-bottom: 2rem;
+}
+.container main .main-content .main-content-left div {
+  display: flex;
+  align-items: center;
+  margin-top: 3rem;
+}
+.container main .main-content .main-content-left div img {
+  border-radius: 50%;
+  width: 45px;
+  height: 100%;
+}
+.container main .main-content .main-content-left div p {
+  font-weight: 500;
+  margin-left: 0.5rem;
+  margin-bottom: 0;
+}
+.container main .main-content .main-content-right {
+  flex: 1;
+}
+.container main .main-content .main-content-right h3 {
+  font-size: 1.5rem;
+}
+.container main .main-content .main-content-right .article {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.2rem;
+}
+.container main .main-content .main-content-right .article .article-left img {
+  width: 9.5rem;
+  height: 10rem;
+}
+.container main .main-content .main-content-right .article .article-right {
+  margin-left: 1.25rem;
+}
+.container main .main-content .main-content-right .article .article-right h2 {
+  font-size: 1.5rem;
+}
+.container main .main-content .main-content-right .article .article-right div {
+  display: flex;
+  align-items: center;
+  margin-top: -1rem;
+}
+.container main .main-content .main-content-right .article .article-right div img {
+  border-radius: 50%;
+  width: 45px;
+}
+.container main .main-content .main-content-right .article .article-right div p {
+  font-weight: 500;
+  margin-left: 0.5rem;
+}
+
+@media (max-width: 800px) {
+  .container .navbar {
+    flex-direction: column;
+  }
+  .container .navbar-bottom {
+    flex-direction: column;
+  }
+  .container .navbar-bottom .nav-left {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .container .navbar-bottom .nav-left li a {
+    margin-top: 1rem;
+    display: flex;
+  }
+  .container main {
+    padding: 0 2.3rem;
+  }
+  .container main h1 {
+    text-align: center;
+  }
+  .container main .main-content {
+    flex-direction: column;
+  }
+  .container main .main-content .main-content-left {
+    margin-right: 0;
+    margin-top: 2.5rem;
+    text-align: center;
+  }
+  .container main .main-content .main-content-left img {
+    width: 90%;
+  }
+  .container main .main-content .main-content-left h2 {
+    text-align: center;
+  }
+  .container main .main-content .main-content-left div {
+    justify-content: center;
+  }
+  .container main .main-content .main-content-right {
+    flex: 1;
+  }
+  .container main .main-content .main-content-right h3 {
+    margin-top: 5rem;
+    margin-bottom: 2.5rem;
+    font-size: 1.75rem;
+    text-align: center;
+  }
+  .container main .main-content .main-content-right .article .article-right {
+    margin-left: 1.25rem;
+  }
+  .container main .main-content .main-content-right .article .article-right h2 {
+    font-size: 1.25rem;
+  }
+  .container main .main-content .main-content-right .article .article-right div {
+    margin-top: 0rem;
+  }
+  .container main .main-content .main-content-right .article .article-right div img {
+    border-radius: 50%;
+    width: 35px;
+  }
+  .container main .main-content .main-content-right .article .article-right div p {
+    font-size: 0.9rem;
+  }
+}

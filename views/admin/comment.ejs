@@ -1,0 +1,82 @@
+<%- include("layouts/header") %>
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <%- include("layouts/sidebar") %>
+
+
+            <!-- Content Wrapper -->
+            <div id="content-wrapper" class="d-flex flex-column">
+
+                <!-- Main Content -->
+                <div id="content">
+
+                    
+
+                        <!-- Begin Page Content -->
+                        <div class="container-fluid">
+
+                            <!-- Page Heading -->
+                            <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                                <h1 class="h3 mb-0 text-gray-800">All Comments</h1>
+                            </div>
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">All Comments</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered" id="myTable" width="100%" cellspacing="0">
+                                            <thead>
+                                                <tr>
+                                                    <th>Date</th>
+                                                    <th>Commenter</th>
+                                                    <th>Email</th>
+                                                    <th>Comment</th>
+                                                    <th>Post</th>
+                                                    <th>Operation</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <% if(displayData.length > 0) {
+                                                for(data of displayData) {
+                                                %>
+                                                    <tr>
+                                                        <td>
+                                                            <%- data.createdAt.toDateString() %>
+                                                        </td>
+                                                        <td>
+                                                            <%- data.name %>
+                                                        </td>
+                                                        <td>
+                                                            <%- data.email %>
+                                                        </td>
+                                                        <td>
+                                                            <%- data.comment %>
+                                                        </td>
+                                                        <td>
+                                                            <%- data.post.title%>
+                                                        </td>
+                                                        <% if(data.status) {%>
+                                                            <td>
+                                                                <a href="deactivecomment/<%- data._id %>" class="btn btn-danger">Deactive</a>
+                                                            </td>
+                                                            <% } else{%>
+                                                                <td>
+                                                                    <a href="activecomment/<%- data._id %>" class="btn btn-success">Active</a>
+                                                                </td>
+                                                                <% } %>
+                                                    </tr>
+                                                    <% } } %>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- End Begin Page Content -->
+                </div>
+                <!-- End of Main Content -->
+
+                <%- include("layouts/footer") %>

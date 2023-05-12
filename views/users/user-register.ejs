@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/user-page.css">
+    
+    <title><%- title%></title>
+</head>
+<body>
+    
+    <div class="container">
+    
+        <nav class="navbar">
+            <ul class="nav-links-left">
+                <li><a href="#">
+                    Product
+                    <i class="fas fa-chevron-down"></i>
+                </a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Use Cases
+                    <i class="fas fa-chevron-down"></i>
+                </a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
+            <ul class="nav-links-right">
+                <a href="<%-navLinkRight_home%>">Home</a>
+                <a href="/users/user-login">Login</a>
+            </ul>
+        </nav>
+    
+        <nav class="navbar-bottom">
+            <ul class="nav-left">
+                <li><a href="#">Project</a></li>
+                <li><a href="#">Remote</a></li>
+                <li><a href="#">Teamwork</a></li>
+                <li><a href="#">Productivity</a></li>
+                <li><a href="#">Marketing</a></li>
+            </ul>
+            <ul class="nav-right">
+                <li><a href="#">
+                    <i class="fas fa-search"></i>
+                </a></li>
+            </ul>
+        </nav>
+    
+        <div class="new_main">
+            <legend>
+                <h2>Register Page</h2>
+            </legend>
+            <form action="/users/post-user-register" enctype="multipart/form-data" method="post">
+                <label for="First-Name">First Name</label>
+                <input type="text" name="firstName" id="">
+                <label for="Second-Name">Second Name</label>
+                <input type="text" name="lastName" id="">
+                <label for="Email">Email</label>
+                <input type="text" name="email" id="">
+                <label for="Email">Username</label>
+                <input type="text" name="userName" id="">
+                <label for="Profile-Image">Profile Image</label>
+                <input type="file" name="profilePicture" id="">
+                <label for="Password">Password</label>
+                <input type="text" name="password" id="">
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    
+    
+    </div>
+
+    <script>
+        /* The design was taken from https://www.uidesigndaily.com/posts/sketch-articles-page-article-blog-post-cards-day-1122 */
+
+            const tl = gsap.timeline({ defaults: { ease: "power2.out", duration: 0.4 } })
+
+            tl.from(".navbar", { y: -20, opacity: 0 })
+            tl.from(".navbar-bottom", { y: -20, opacity: 0 })
+            tl.from(".main-title", { y: -20, opacity: 0 })
+            tl.from(".main-content-left", { y: -20, opacity: 0 })
+            tl.from(".main-content-right", { y: -20, opacity: 0 })
+    </script>
+    
+</body>
+</html>

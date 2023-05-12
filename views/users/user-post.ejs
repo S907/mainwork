@@ -1,0 +1,49 @@
+<%- include("partial/header.ejs") %>
+    <%- include("partial/header-top.ejs") %>
+
+        <div class="sign-up-form">
+            <br>
+            <h1 style="font-family: LobsterTwo-Regular;">Write Your Story</h1>
+           
+                <div class="">
+                   
+                </div>
+             
+                    <form action="/post-blog-form" method="post" enctype="multipart/form-data" style="font-family: LobsterTwo-Regular; font-size: 1.5rem;">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Post Title</label><br>
+                            <input type="text" class="form-control" name="title" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Post Title" style="font-size: 1.2rem;" required>
+
+                        </div>
+                        <div class="form-group">
+                            <div class="form-group">
+                                <label>Choose Category</label>
+                                <select name="category" class="form-control" id="category" style="font-size: 1.2rem;" required>
+                        <option disabled selected>Select Category</option>
+                        <% categoryData.map((data)=>{%>
+                            <option value="<%= data._id %>"><%= data.categoryName %></option>
+                        <% }) %>
+                    </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Post Subtitle</label><br>
+                            <input type="text" class="form-control" name="subTitle" id="exampleInputPassword1" placeholder="Enter Post Sub Title" style="font-size: 1.2rem;" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Enter Post</label><br>
+                            <textarea name="postText" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Post image:</label><br>
+                            <input type="file" class="form-control" name="image" id="exampleInputPassword1" placeholder="enter post sub title" required>
+                        </div>
+                        <p>
+                            <button type="submit" class="btn btn-primary btn-lg btn-block" style="font-size: 1.2rem;">Post</button>
+                    </form>
+        </div>
+        <%- include("partial/footer.ejs") %>
+            <script src="https://cdn.ckeditor.com/4.16.2/standard/ckeditor.js"></script>
+            <script>
+                CKEDITOR.replace('post');
+            </script>
